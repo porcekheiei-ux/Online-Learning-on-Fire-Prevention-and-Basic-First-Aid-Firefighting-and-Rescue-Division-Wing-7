@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>แบบทดสอบออนไลน์ - บทเรียนการป้องกันอัคคีภัย</title>
+  <style>
+    body {
+      font-family: "Sarabun", sans-serif;
+      background: linear-gradient(135deg, #ffebee, #f5f7fa);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #c62828;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 25px;
+    }
+
+    button {
+      display: block;
+      margin: 30px auto;
+      background: #c62828;
+      color: white;
+      border: none;
+      padding: 14px 35px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #a31616;
+      transform: scale(1.08);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .progress-container {
+      width: 100%;
+      background: #f1f1f1;
+      border-radius: 20px;
+      overflow: hidden;
+      height: 15px;
+      margin-bottom: 20px;
+    }
+
+    .progress-bar {
+      height: 15px;
+      width: 0;
+      background: #c62828;
+      transition: width 0.5s;
+    }
+  </style>
+</head>
+<body>
+
+  <header>🧯 เเบบทดสอบก่อนเรียน</header>
+
+  <main>
+    <div class="progress-container"><div id="progress" class="progress-bar"></div></div>
+
+   
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdJWEt-FpthNnvLocyKlY38j33dkF2y1DnRK4j96oGSQMbZYg/viewform?embedded=true" width="1000" height="1692" frameborder="0" marginheight="0" marginwidth="0">กำลังโหลด…</iframe>
+
+    <label style="display:block; text-align:center; margin-top:20px;">
+  <input type="checkbox" id="doneQuiz"> ✅ ฉันทำแบบทดสอบเสร็จแล้ว
+</label>
+
+<button id="nextBtn" disabled>ไปหน้าถัดไป ➡️</button>
+
+<script>
+  const checkbox = document.getElementById("doneQuiz");
+  const nextBtn = document.getElementById("nextBtn");
+
+  checkbox.addEventListener("change", function() {
+    nextBtn.disabled = !this.checked; 
+  });
+
+  nextBtn.addEventListener("click", function() {
+    window.location.href = "ooo.html"; 
+  });
+</script>
+  </script>
+</body>
+</html>

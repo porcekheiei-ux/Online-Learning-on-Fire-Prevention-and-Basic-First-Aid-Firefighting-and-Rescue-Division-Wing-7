@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>บทเรียนออนไลน์การป้องกันอัคคีภัยและการปฐมพยาบาลเบื้องต้น</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      height: 100%;
+      overflow-x: hidden;
+    }
+
+    /* พื้นหลังวิดีโอ */
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      width: 100vw;
+      height: 100vh;
+      transform: translateX(-50%);
+      z-index: -2;
+      object-fit: cover;
+    }
+
+    /* Layer มืดบางๆ บน video */
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4);
+      z-index: -1;
+    }
+
+    header {
+      padding: 40px 20px;
+      text-align: center;
+      color: #fff;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin: 20px;
+    }
+
+    .option-button {
+      border: none;
+      background: rgba(255,255,255,0.9);
+      cursor: pointer;
+      text-align: center;
+      border-radius: 15px;
+      padding: 15px;
+      width: 180px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .option-button:hover {
+      transform: translateY(-8px) scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    }
+
+    .option-button img {
+      width: 100%;
+      height: 120px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      object-fit: cover;
+    }
+
+    .label {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* ตัวละครเต้น */
+    .dancing-character {
+      position: fixed;
+      bottom: 20px;
+      width: 120px;
+      z-index: 999;
+      opacity: 0.8;
+    }
+
+    .dancing-character img {
+      width: 100%;
+      animation: bounce 1s infinite;
+    }
+
+    .left {
+      left: 20px;
+    }
+
+    .right {
+      right: 20px;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="llo/uitl.mp4" type="video/mp4">
+  </video>
+  <div class="overlay"></div>
+
+  <header>
+    บทเรียนออนไลน์การป้องกันอัคคีภัยและการปฐมพยาบาลเบื้องต้น
+  </header>
+
+  <div class="button-row">
+    <button class="option-button" onclick="goToPage('page1.html')">
+      <img src="llo/6421542627ed5-fire-flame-cartoon-character-animated-gifs.gif" alt="เพลิง/เคมีเพลิง">
+      <span class="label">เพลิง/เคมีเพลิง</span>
+    </button>
+
+    <button class="option-button" onclick="goToPage('page2.html')">
+      <img src="llo/1902515_a1304.gif" alt="ทฤษฎีการสันดาป">
+      <span class="label">ทฤษฎีการสันดาป</span>
+    </button>
+
+    <button class="option-button" onclick="goToPage('page3.html')">
+      <img src="llo/z5qetmjz7oae1.gif" alt="การจำแนกประเภทของเพลิง">
+      <span class="label">การจำแนกประเภทของเพลิง</span>
+    </button>
+  </div>
+
+  <div class="button-row">
+    <button class="option-button" onclick="goToPage('page4.html')">
+      <img src="llo/fc3aed8eb2ea0fac349b71825a676ab1.gif" alt="อุปกรณ์การดับเพลิงเบื้องต้น">
+      <span class="label">อุปกรณ์การดับเพลิงเบื้องต้น</span>
+    </button>
+
+    <button class="option-button" onclick="goToPage('page5.html')">
+      <img src="llo/fire_out-245419.gif" alt="การควบคุมเพลิงและการดับเพลิง">
+      <span class="label">การควบคุมเพลิงและการดับเพลิง</span>
+    </button>
+
+    <button class="option-button" onclick="goToPage('page6.html')">
+      <img src="llo/1649166908_661580_gif-url.gif" alt="การปฐมพยาบาลเบื้องต้นจากเพลิงไหม้">
+      <span class="label">การปฐมพยาบาลเบื้องต้นจากเพลิงไหม้</span>
+    </button>
+  </div>
+
+  <!-- ตัวละครเต้น -->
+  <div class="dancing-character left">
+    <img src="llo/carlton-dance-gif.gif" alt="ตัวละครเต้นซ้าย">
+  </div>
+  <div class="dancing-character right">
+    <img src="llo/carlton-dance-gif.gif" alt="ตัวละครเต้นขวา">
+  </div>
+
+  <script>
+    function goToPage(page) {
+      window.location.href = page;
+    }
+  </script>
+</body>
+</html>

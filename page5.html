@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>วิดีโอสื่อการสอน</title>
+  <style>
+    body {
+      font-family: "TH SarabunPSK", sans-serif;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+
+    .video-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .video-item {
+      background-color: #fff;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 10px;
+      width: 300px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .video-item video {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .caption {
+      text-align: center;
+      margin-top: 8px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* ปุ่มไปหน้าถัดไป */
+    .next-section {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    #nextBtn {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #nextBtn:hover {
+      background-color: #0056b3;
+    }
+
+    #doneQuiz {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>วิดีโอสื่อการเรียนรู้</h2>
+
+  <div class="video-gallery">
+    <div class="video-item">
+      <video controls>
+        <source src="llo/778250395.452550.mp4" type="video/mp4">
+        เบราว์เซอร์ของคุณไม่รองรับวิดีโอ
+      </video>
+      <div class="caption">
+        ปฏิกิริยาการเผาไหม้จากไฟฟ้าลัดวงจรเเละวิธีรับมือ<br>
+        1. ตั้งสติ<br>
+        2. ปิดสวิตช์ไฟ<br>
+        3. สับคัทเอ้าท์
+      </div>
+    </div>
+
+    <div class="video-item">
+      <video controls>
+        <source src="llo/778250399.338677.mp4" type="video/mp4">
+        เบราว์เซอร์ของคุณไม่รองรับวิดีโอ
+      </video>
+      <div class="caption">
+        ปฏิกิริยาการเผาไหม้จากกระทะไหม้เเละวิธีรับมือ<br>
+        1. ตั้งสติ<br>
+        2. ปิดแก๊ส<br>
+        3. ใช้ผ้าชุบน้ำคลุมกระทะ<br>
+      </div>
+    </div>
+
+    <div class="video-item">
+      <video controls>
+        <source src="llo/778250779.060920.mp4" type="video/mp4">
+        เบราว์เซอร์ของคุณไม่รองรับวิดีโอ
+      </video>
+      <div class="caption">
+        แก๊สรั่วและวิธีรับมือ<br>
+        1. ตั้งสติ<br>
+        2. ย่อตัวลง<br>
+        3. ใช้มือดันให้ตัวถังออก<br>
+        4. ปิดวาล์ว
+      </div>
+    </div>
+
+    <div class="video-item">
+      <video controls>
+        <source src="llo/778251221.156149.mp4" type="video/mp4">
+        เบราว์เซอร์ของคุณไม่รองรับวิดีโอ
+      </video>
+      <div class="caption">
+        เทคนิคการใช้อุปกรณ์ถังดับเพลิง
+      </div>
+    </div>
+  </div>
+
+  <!-- ส่วนของปุ่มไปหน้าถัดไป -->
+  <div class="next-section">
+    <label>
+      <input type="checkbox" id="doneQuiz"> ฉันได้ดูวิดีโอทั้งหมดแล้ว
+    </label>
+    <br><br>
+    <button id="nextBtn" disabled>ไปหน้าถัดไป</button>
+  </div>
+
+  <script>
+    const checkbox = document.getElementById("doneQuiz");
+    const nextBtn = document.getElementById("nextBtn");
+
+    checkbox.addEventListener("change", function() {
+      nextBtn.disabled = !this.checked;
+    });
+
+    nextBtn.addEventListener("click", function() {
+      window.location.href = "page6.html"; // ลิงก์ไปยังหน้าถัดไป
+    });
+  </script>
+
+</body>
+</html>
